@@ -17,8 +17,7 @@ Deliverables include a full report, executive summary, Streamlit dashboard, GitH
 ### 🔵 Interactive Dashboard (Streamlit)  
 *https://competitive-intel-asset-mgmt.streamlit.app*
 
-### 🌐 GitHub Pages Website  
-*Add your GitHub Pages link here.*
+
 
 ## 📄 Download the Reports
 
