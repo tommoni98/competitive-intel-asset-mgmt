@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Competitive Intelligence – Asset Management</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Competitive intelligence dashboard and report comparing BlackRock, State Street, and Invesco based on 2024 filings." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container hero-content">
+      <div>
+        <p class="tag">Portfolio Project</p>
+        <h1>Competitive Intelligence – Asset Management</h1>
+        <p class="subtitle">
+          A strategic analysis of <strong>BlackRock</strong>, <strong>State Street</strong> and <strong>Invesco</strong>
+          using 2024 10-Ks and annual reports, delivered as a written report and interactive dashboard.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#project">View Project</a>
+          <a class="btn secondary" href="#downloads">Downloads</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h2>At a glance</h2>
+        <ul>
+          <li>3 global asset managers</li>
+          <li>20+ page research report</li>
+          <li>Interactive Streamlit dashboard</li>
+          <li>SWOT & strategic outlook</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="project" class="section">
+      <div class="container">
+        <h2>Project Overview</h2>
+        <p>
+          This project delivers a consulting-style competitive intelligence study of three leading asset managers:
+          <strong>BlackRock</strong>, <strong>State Street</strong> and <strong>Invesco</strong>. It combines
+          fundamental analysis of 2024 10-K / annual report disclosures with structured financial comparison,
+          technology and platform assessment, and a forward-looking strategic view.
+        </p>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Scope</h3>
+            <ul>
+              <li>Financial performance & profitability</li>
+              <li>Business model & client mix</li>
+              <li>Product & AUM composition</li>
+              <li>Technology & platforms (Aladdin, Alpha, etc.)</li>
+              <li>Risk & regulatory environment</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Deliverables</h3>
+            <ul>
+              <li>Full competitive intelligence report (PDF)</li>
+              <li>Executive summary (2 pages)</li>
+              <li>Interactive Streamlit dashboard</li>
+              <li>GitHub repo with code and documentation</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Tools & Skills</h3>
+            <ul>
+              <li>Python (pandas, plotly, Streamlit)</li>
+              <li>Financial & strategic analysis</li>
+              <li>Data storytelling & visualization</li>
+              <li>Working with SEC / regulatory filings</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dashboard" class="section alt">
+      <div class="container">
+        <h2>Interactive Dashboard</h2>
+        <p>
+          The interactive dashboard allows users to compare AUM, ETF exposure, alternatives, pricing and technology
+          positioning across the three firms, as well as explore SWOT summaries and narrative insights.
+        </p>
+        <div class="callout">
+          <p><strong>Live dashboard link:</strong></p>
+          <p>
+            <!-- TODO: replace this href with your actual deployed Streamlit URL -->
+            <a class="btn primary" href="https://YOUR-STREAMLIT-APP-URL" target="_blank" rel="noopener">
+              Open Streamlit Dashboard
+            </a>
+          </p>
+          <p class="hint">
+            If you are viewing this on GitHub Pages and the dashboard is not yet deployed, this button will be a placeholder.
+          </p>
+        </div>
+        <h3>Key views in the dashboard</h3>
+        <ul class="bullet-columns">
+          <li>Overview & scale: total AUM, ETF AUM, alternatives AUM</li>
+          <li>ETF penetration as % of total AUM</li>
+          <li>Product mix by asset class / capability</li>
+          <li>Fee vs technology positioning scatterplot</li>
+          <li>Interactive SWOT viewer per company</li>
+          <li>Textual strategic insights aligned with the written report</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="downloads" class="section">
+      <div class="container">
+        <h2>Reports & Downloads</h2>
+        <p>
+          All deliverables for this project are available directly from the GitHub repository.
+        </p>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Full Report (PDF)</h3>
+            <p>
+              Consulting-style document synthesising industry context, competitor profiles, comparative analysis,
+              SWOT and forward-looking outlook.
+            </p>
+            <!-- TODO: update href paths after you add files to /report in your repo -->
+            <a class="btn primary" href="report/Competitive_Intelligence_Report.pdf" target="_blank" rel="noopener">
+              View PDF
+            </a>
+          </div>
+          <div class="card">
+            <h3>Executive Summary</h3>
+            <p>
+              A concise 2-page summary designed for senior stakeholders, focusing on key findings and implications.
+            </p>
+            <a class="btn secondary" href="report/Executive_Summary.pdf" target="_blank" rel="noopener">
+              View Summary
+            </a>
+          </div>
+          <div class="card">
+            <h3>GitHub Repository</h3>
+            <p>
+              Source code for the dashboard, data definitions, and this site are all available on GitHub.
+            </p>
+            <a class="btn ghost" href="https://github.com/YOUR-USERNAME/YOUR-REPO" target="_blank" rel="noopener">
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="insights" class="section alt">
+      <div class="container">
+        <h2>Selected Insights</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>BlackRock</h3>
+            <p>
+              Combines unmatched scale (> $11.5T AUM) with the Aladdin platform to create a powerful
+              scale + technology moat, while pushing aggressively into private markets and data.
+            </p>
+          </div>
+          <div class="card">
+            <h3>State Street</h3>
+            <p>
+              A custody-centric model built on $46T+ AUC/A and State Street Alpha; earnings are more tied
+              to servicing fees and NII than traditional asset managers.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Invesco</h3>
+            <p>
+              Competes as a large independent manager with a strong ETF and QQQ franchise, but faces
+              scale and fee-pressure challenges versus mega-managers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About This Project</h2>
+        <p>
+          This project was completed as a portfolio piece to demonstrate end-to-end capability in
+          research, analysis, data modelling and communication:
+        </p>
+        <ul class="bullet-columns">
+          <li>Reading and extracting data from 10-Ks and annual reports</li>
+          <li>Building structured comparison tables and product maps</li>
+          <li>Creating a narrative research report for senior stakeholders</li>
+          <li>Designing and coding an interactive dashboard in Streamlit</li>
+          <li>Packaging everything in a reproducible GitHub repository</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© YOUR NAME – Competitive Intelligence Project</p>
+      <p class="small">
+        Built with Python, Streamlit and GitHub Pages.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
