@@ -6,9 +6,7 @@ import plotly.graph_objects as go
 import os
 from pathlib import Path
 
-import pkgutil
 
-st.write("plotly installed?", pkgutil.find_loader("plotly") is not None)
 
 # ----------------------------------------------------
 # PAGE CONFIG & CUSTOM STYLING
