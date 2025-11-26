@@ -3,6 +3,10 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
+import os
+from pathlib import Path
+
+
 # ----------------------------------------------------
 # PAGE CONFIG & CUSTOM STYLING
 # ----------------------------------------------------
@@ -731,21 +735,66 @@ def render_downloads():
     st.markdown('<div class="section-title">Downloads & Artefacts</div>', unsafe_allow_html=True)
     st.markdown(
         '<div class="section-subtitle">'
-        "Links to the full report, executive summary and GitHub repository (configure paths in your deployment)."
+        "Download the PDF versions of the full report and executive summary used in this analysis."
         "</div>",
         unsafe_allow_html=True,
     )
 
-    st.markdown("#### Documents")
+    # app.py is in /dashboard → go up to repo root → into /report
+    base_dir = Path(__file__).resolve().parent          # .../dashboard
+    repo_root = base_dir.parent                         # .../
+    report_dir = repo_root / "report"
+
+    full_report_path = report_dir / "Competitive Intelligence Analysis.pdf"
+    exec_summary_path = report_dir / "Executive Summary.pdf"
+
+    col1, col2 = st.columns(2)
+
+    # Full report download
+    with col1:
+        st.markdown("#### 📄 Full Competitive Intelligence Report")
+        if full_report_path.exists():
+            with full_report_path.open("rb") as f:
+                full_bytes = f.read()
+            st.download_button(
+                label="Download Full Report (PDF)",
+                data=full_bytes,
+                file_name="Competitive Intelligence Analysis.pdf",
+                mime="application/pdf",
+            )
+        else:
+            st.warning(
+                "Full report PDF not found.\n\n"
+                "Expected at: `report/Competitive Intelligence Analysis.pdf`"
+            )
+
+    # Executive summary download
+    with col2:
+        st.markdown("#### 📄 Executive Summary")
+        if exec_summary_path.exists():
+            with exec_summary_path.open("rb") as f:
+                summary_bytes = f.read()
+            st.download_button(
+                label="Download Executive Summary (PDF)",
+                data=summary_bytes,
+                file_name="Executive Summary.pdf",
+                mime="application/pdf",
+            )
+        else:
+            st.warning(
+                "Executive summary PDF not found.\n\n"
+                "Expected at: `report/Executive Summary.pdf`"
+            )
+
+    st.markdown("---")
+    st.markdown("#### 🔗 GitHub Repository")
     st.write(
-        "- Full Competitive Intelligence Report (PDF)\n"
-        "- Executive Summary (2 pages)\n"
-        "- GitHub repository with Streamlit app and documentation"
+        "View the full project, code and documentation on GitHub. "
+        "Update this text with your actual repo URL, for example:\n\n"
+        "`https://github.com/tommoni98/competitive-intel-asset-mgmt`"
     )
-    st.info(
-        "In your deployed environment, you can use `st.download_button` with file paths to serve the actual "
-        "PDF/Word documents from your `report/` folder."
-    )
+
+
 
 
 # ----------------------------------------------------
