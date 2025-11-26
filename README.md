@@ -60,8 +60,8 @@ competitive-intel-asset-management/
 ├── dashboard/
 │   └── app.py
 ├── report/
-│   ├── Competitive_Intelligence_Report_FULL.docx
-│   └── Executive_Summary.docx
+│   ├── Competitive_Intelligence_Report_FULL.pdf
+│   └── Executive_Summary.pdf
 ├── index.html
 ├── style.css
 ├── requirements.txt
